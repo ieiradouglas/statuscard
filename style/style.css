@@ -90,7 +90,7 @@ body {
 
 @media screen and (max-width:900px) {
     .content {
-        height: calc(100vh + 200px);
+        height: calc(100vh);
     }
     .stats-background {
         flex-flow: column-reverse;
