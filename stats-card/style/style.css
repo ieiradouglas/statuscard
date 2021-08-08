@@ -1,0 +1,130 @@
+body {
+    box-sizing: border-box;
+    background: #090b1a;
+    margin:0;
+    padding:0;
+    font-family: 'inter', sans-serif;
+    color: #9796a4;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.stats-background {
+    width: 1083px;
+    background: #1b1938;
+    border-radius: 10px;
+    
+    display:flex;
+    justify-content: space-between;
+}
+
+.card-info {
+    width: 100%;
+    display:flex;
+    flex-flow: column nowrap;
+    margin: 6% 4% 6% 6%;
+}
+
+/* Formatação do título do card */
+.card-info h1 {
+    font-size:2.2rem;
+    font-family: 'Lexend Deca', sans-serif;
+    color: #fdfdfd;
+    margin: 0 0 8%;
+}
+.markup {
+    color: #aa5cdb;
+}
+
+/* Formatação do parágrafo do card */
+.card-text p{
+    font-size: 1rem;
+    line-height: 1.75;
+    flex-grow: 1;
+    max-width: 90%;
+    margin:0;
+    font-weight: 600;
+}
+
+/* Formatação dos status do card */
+.card-text-numbers {
+    display: flex;
+    text-transform: uppercase;
+}
+.card-text-numbers div {
+    margin:5% 14% 0% 0%;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+.markup-numbers {
+    font-size:25px;
+    color:#fdfdfd;
+    font-weight: 700;
+}
+
+/* Formatação da imagem do card */
+.stats-image {
+    width: 418px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: hsl(280, 100%,75%);
+   
+    display:flex;
+}
+.stats-image img{
+    min-width: 100%;
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+    mix-blend-mode: multiply;
+    filter: brightness(1) contrast(0.65);
+    
+} 
+
+/* Formatação Mobile */
+
+@media screen and (max-width:900px) {
+    .content {
+        height: calc(100vh + 300px);
+    }
+    .stats-background {
+        flex-flow: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        width:345px;
+    }
+    .stats-image {
+        width: 345px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .stats-image img{
+        border-radius: 10px 10px 0px 0px;
+    }
+    .stats-background h1 {
+        text-align: center;
+    }
+    .card-text {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .card-text p {
+        text-align: center;
+    }
+    .card-text-numbers {
+        flex-flow: column;
+        align-items: center;
+        margin: 5%;
+    }
+    .card-text-numbers div {
+        text-align: center;
+    }
+    .card-text-numbers div:nth-of-type(1), div:nth-of-type(2) {
+        margin-bottom: 25px;
+    }
+}
